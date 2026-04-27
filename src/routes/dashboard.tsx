@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Bell, Package, MapPin, ArrowRight, ChevronUp, Box, Home, Map, User } from "lucide-react";
+import { Bike } from "@/components/Bike";
 
 export const Route = createFileRoute("/dashboard")({
   head: () => ({
@@ -75,6 +76,18 @@ function Dashboard() {
           </button>
         </div>
 
+        {/* Hero Section with Bike */}
+        <div className="relative z-10 h-96 flex flex-col items-center justify-center px-4">
+          {/* Animated Bike */}
+          <motion.div
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="w-full max-w-xs"
+          >
+            <Bike className="w-full h-auto drop-shadow-lg" />
+          </motion.div>
+        </div>
+
         {/* Drag-up gesture hint */}
         <AnimatePresence>
           {!expanded && (
@@ -84,7 +97,7 @@ function Dashboard() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               onClick={() => setExpanded(true)}
-              className="absolute z-20 left-1/2 -translate-x-1/2 bottom-[44%] flex flex-col items-center gap-1"
+              className="absolute z-20 left-1/2 -translate-x-1/2 bottom-[20%] flex flex-col items-center gap-1"
             >
               <motion.div
                 animate={{ y: [0, -8, 0] }}

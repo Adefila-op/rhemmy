@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Bell, Package, MapPin, ArrowRight, ChevronUp, Box, Home, Map, User } from "lucide-react";
 import { Bike } from "@/components/Bike";
+import { BikeLaptop } from "@/components/BikeLaptop";
 
 export const Route = createFileRoute("/dashboard")({
   head: () => ({
@@ -78,13 +79,22 @@ function Dashboard() {
 
         {/* Hero Section with Bike */}
         <div className="relative z-10 h-96 flex flex-col items-center justify-center px-4">
-          {/* Animated Bike */}
+          {/* Mobile Bike - visible on small screens */}
           <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="w-full max-w-xs"
+            className="w-full max-w-xs block sm:hidden"
           >
             <Bike className="w-full h-auto drop-shadow-lg" />
+          </motion.div>
+
+          {/* Laptop Bike - visible on larger screens */}
+          <motion.div
+            animate={{ y: [0, -16, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+            className="w-full hidden sm:block"
+          >
+            <BikeLaptop className="w-full h-auto drop-shadow-xl" />
           </motion.div>
         </div>
 

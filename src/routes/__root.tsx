@@ -36,7 +36,7 @@ export const Route = createRootRoute({
       { property: "og:description", content: "Door-to-door pickup and delivery across Nigeria." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@Rhemmy_Express" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

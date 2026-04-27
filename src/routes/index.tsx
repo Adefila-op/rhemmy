@@ -39,9 +39,9 @@ function Index() {
   return (
     <>
       {/* MOBILE VIEW - Rhemmy Dash Shell (small screens) */}
-      <div className="min-h-screen w-full bg-neutral-100 flex items-center justify-center p-0 sm:p-6 font-sans sm:hidden">
+      <div className="min-h-screen w-full bg-neutral-100 flex items-center justify-center p-0 md:p-6 font-sans md:hidden">
         {/* Phone frame */}
-        <div className="relative w-full h-screen bg-orange-500 shadow-2xl border-gray-900 overflow-hidden">
+        <div className="relative w-full h-screen md:h-[860px] bg-orange-500 shadow-2xl border-gray-900 overflow-hidden">
           {/* Status bar */}
           <div className="relative z-30 flex items-center justify-between px-7 pt-5 pb-2 text-gray-900 font-semibold text-sm">
             <span>9:41</span>
@@ -224,7 +224,7 @@ function Index() {
       </div>
 
       {/* DESKTOP VIEW - Rhemmy Ride Hub Landing (large screens) */}
-      <main className="hidden sm:block">
+      <main className="hidden md:block">
         {/* HERO */}
         <section
           className="relative min-h-[100vh] overflow-hidden"

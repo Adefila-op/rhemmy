@@ -42,24 +42,6 @@ function Index() {
       <div className="md:hidden min-h-screen w-full bg-neutral-100 flex items-center justify-center p-0 md:p-6 font-sans">
         {/* Phone frame */}
         <div className="relative w-full h-screen bg-orange-500 shadow-2xl border-gray-900 overflow-hidden">
-          {/* Status bar */}
-          <div className="relative z-30 flex items-center justify-between px-7 pt-5 pb-2 text-gray-900 font-semibold text-sm">
-            <span>9:41</span>
-            <div className="flex items-center gap-1.5">
-              <div className="flex gap-0.5">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="h-1 w-0.5 bg-gray-900" />
-                ))}
-              </div>
-              <div className="w-4 h-2.5 border border-gray-900 rounded-sm flex items-center px-0.5">
-                <div className="w-full h-1.5 bg-gray-900 rounded-xs" />
-              </div>
-              <div className="w-6 h-3 border border-gray-900 rounded-sm flex items-end px-0.5">
-                <div className="w-full h-2 bg-gray-900" />
-              </div>
-            </div>
-          </div>
-
           {/* Header */}
           <div className="relative z-30 flex items-start justify-between px-7 pt-3">
             <div className="text-2xl font-bold text-gray-900">R Express</div>

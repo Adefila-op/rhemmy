@@ -44,7 +44,13 @@ function Index() {
         <div className="relative w-full h-screen bg-orange-500 shadow-2xl border-gray-900 overflow-hidden">
           {/* Header */}
           <div className="relative z-30 flex items-start justify-between px-7 pt-3">
-            <div className="text-2xl font-bold text-gray-900">R Express</div>
+            <Link to="/" className="flex items-center gap-1.5">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-display text-lg font-bold text-gray-900 shadow-md">R</div>
+              <div className="leading-tight">
+                <div className="font-display text-sm font-bold text-gray-900">RHEMMY</div>
+                <div className="text-[8px] font-bold uppercase tracking-[0.2em] text-gray-800">Express</div>
+              </div>
+            </Link>
             <button
               aria-label="Notifications"
               className="h-11 w-11 rounded-full bg-white/95 grid place-items-center shadow-md hover:scale-105 transition-transform"

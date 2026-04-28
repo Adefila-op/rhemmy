@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Bell, Package, MapPin, ArrowRight, ChevronUp, Box, Home, Map, User } from "lucide-react";
@@ -51,7 +51,13 @@ function Dashboard() {
         <div className="relative w-full h-screen sm:h-[860px] sm:rounded-[3rem] overflow-hidden bg-orange-500 shadow-2xl sm:border-[10px] sm:border-gray-900">
           {/* Header */}
           <div className="relative z-30 flex items-start justify-between px-7 pt-3">
-            <div className="text-2xl font-bold text-gray-900">R Express</div>
+            <Link to="/" className="flex items-center gap-1.5">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-display text-lg font-bold text-gray-900 shadow-md">R</div>
+              <div className="leading-tight">
+                <div className="font-display text-sm font-bold text-gray-900">RHEMMY</div>
+                <div className="text-[8px] font-bold uppercase tracking-[0.2em] text-gray-800">Express</div>
+              </div>
+            </Link>
             <button
               aria-label="Notifications"
               className="h-11 w-11 rounded-full bg-white/95 grid place-items-center shadow-md hover:scale-105 transition-transform"
